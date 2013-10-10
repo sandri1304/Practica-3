@@ -36,6 +36,32 @@ describe("GameBoard", function(){
 		expect(board.finalizeRemoved).toHaveBeenCalled();
 	
 	});
+	
+	it("GAmeBoard.Step()",function(){
+		var board = new GameBoard();
+		spyOn(board, "step");
+		board.step(new PlayerShip());
+		
+		waits(100);
+		
+		runs(function(){
+			expect(board.step).toHaveBeenCalled();
+		});
+	
+	});
+	
+	it("GAmeBoard.draw()",function(){
+		var board = new GameBoard();
+		spyOn(board, "draw");
+		board.draw(new PlayerShip());
+		
+		waits(100);
+		
+		runs(function(){
+			expect(board.draw).toHaveBeenCalled();
+		});
+	
+	 });
 });
 
 /*
