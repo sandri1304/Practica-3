@@ -33,7 +33,7 @@ describe("GameBoard", function(){
 		
 		expect(board.remove).toHaveBeenCalled();
 		expect(board.resetRemoved).toHaveBeenCalled();
-		expect(board.finalizeRemoved).toHaveBeenCalled();
+		expect(boars.finalizeRemoved).toHaveBeenCalled();
 	
 	});
 });
