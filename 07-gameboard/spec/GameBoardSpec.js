@@ -119,11 +119,11 @@ describe("GameBoard", function(){
 		var objeto1=new objet;
 		var objeto2 = new objet2;
 		
-		spyOn(board, "overlap");
+		//spyOn(board, "overlap");
 		board.add(objeto1);
 		board.add(objeto2);
 		
-		expect(board.overlap(objeto1,objeto2)).toHaveBeenCalled();
+		//expect(board.overlap(objeto1,objeto2)).toHaveBeenCalled();
 		expect(board.overlap(objeto1,objeto2)).toEqual(true);	
 	
 	});
