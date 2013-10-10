@@ -17,7 +17,10 @@ describe("GameBoard", function(){
 		var board = new GameBoard();
 		spyOn(board, "add");
 		board.add(new PlayerShip());
+		var gb=5;
+		obj=board.add(gb);
 		
+		expect(board.objects[0]).toEqual(obj);
 		expect(board.add).toHaveBeenCalled();
 	});
 	
@@ -37,7 +40,11 @@ describe("GameBoard", function(){
 	
 	});
 	
+<<<<<<< HEAD
 	it("GAmeBoard.Step()",function(){
+=======
+	it ("GameBoard.step()",function(){
+>>>>>>> ramaejercprot7
 		var board = new GameBoard();
 		spyOn(board, "step");
 		board.step(new PlayerShip());
@@ -47,10 +54,16 @@ describe("GameBoard", function(){
 		runs(function(){
 			expect(board.step).toHaveBeenCalled();
 		});
+<<<<<<< HEAD
 	
 	});
 	
 	it("GAmeBoard.draw()",function(){
+=======
+	});
+	
+	it ("GameBoard.draw()",function(){
+>>>>>>> ramaejercprot7
 		var board = new GameBoard();
 		spyOn(board, "draw");
 		board.draw(new PlayerShip());
@@ -60,8 +73,41 @@ describe("GameBoard", function(){
 		runs(function(){
 			expect(board.draw).toHaveBeenCalled();
 		});
+<<<<<<< HEAD
 	
 	 });
+=======
+	});
+	
+	/*
+	it ("GameBoard.Overlap()",function(){
+	
+		var board = new GameBoard();
+		
+		var objet1={
+			x=2;
+			y=3;
+			h=4;
+			w=5;
+		};
+		
+		var objet2={
+			x=2;
+			y=3;
+			h=4;
+			w=5;
+		};
+		
+		spyOn(board, "overlap");
+		board.add(objet1);
+		board.add(objet2);
+		
+		expect(board.overlap(objet1,objet2)).toHaveBeenCalled();
+		expect(board.overlap(objet1,objet2)).toEqual(true);	
+	
+	});
+	*/
+>>>>>>> ramaejercprot7
 });
 
 /*
