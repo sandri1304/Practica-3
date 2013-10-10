@@ -40,11 +40,9 @@ describe("GameBoard", function(){
 	
 	});
 	
-<<<<<<< HEAD
-	it("GAmeBoard.Step()",function(){
-=======
+
 	it ("GameBoard.step()",function(){
->>>>>>> ramaejercprot7
+
 		var board = new GameBoard();
 		spyOn(board, "step");
 		board.step(new PlayerShip());
@@ -54,16 +52,14 @@ describe("GameBoard", function(){
 		runs(function(){
 			expect(board.step).toHaveBeenCalled();
 		});
-<<<<<<< HEAD
+
 	
 	});
 	
-	it("GAmeBoard.draw()",function(){
-=======
-	});
+
 	
 	it ("GameBoard.draw()",function(){
->>>>>>> ramaejercprot7
+
 		var board = new GameBoard();
 		spyOn(board, "draw");
 		board.draw(new PlayerShip());
@@ -73,10 +69,10 @@ describe("GameBoard", function(){
 		runs(function(){
 			expect(board.draw).toHaveBeenCalled();
 		});
-<<<<<<< HEAD
+
 	
 	 });
-=======
+
 	});
 	
 	/*
@@ -107,7 +103,7 @@ describe("GameBoard", function(){
 	
 	});
 	*/
->>>>>>> ramaejercprot7
+
 });
 
 /*

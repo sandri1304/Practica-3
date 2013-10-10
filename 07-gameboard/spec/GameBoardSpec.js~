@@ -59,17 +59,14 @@ describe("GameBoard", function(){
 	});
 	
 	it("GAmeBoard.draw()",function(){
-		var board = new GameBoard();
-		spyOn(board, "draw");
-		board.step(new PlayerShip());
 =======
 	});
 	
-	it ("GameBoard.step()",function(){
+	it ("GameBoard.draw()",function(){
+>>>>>>> ramaejercprot7
 		var board = new GameBoard();
 		spyOn(board, "draw");
 		board.draw(new PlayerShip());
->>>>>>> ramaejercprot7
 		
 		waits(100);
 		
