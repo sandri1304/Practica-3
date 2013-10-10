@@ -26,9 +26,12 @@ describe("GameBoard", function(){
 	
 	it ("GameBoard.Remove()", function(){
 		var board = new GameBoard();
+		
 		spyOn(board, "remove");
 		spyOn(board,"resetRemoved");
 		spyOn(board, "finalizeRemoved");
+		
+		board.add(new PlayerShip());
 		
 		board.remove(new PlayerShip());
 		board.resetRemoved(new PlayerShip());
@@ -37,6 +40,7 @@ describe("GameBoard", function(){
 		expect(board.remove).toHaveBeenCalled();
 		expect(board.resetRemoved).toHaveBeenCalled();
 		expect(board.finalizeRemoved).toHaveBeenCalled();
+		//expect(board.objects[0]).toEqual(undefined);
 	
 	});
 	
@@ -69,40 +73,61 @@ describe("GameBoard", function(){
 		runs(function(){
 			expect(board.draw).toHaveBeenCalled();
 		});
-
-	
+		
 	 });
-
-	});
+	 
+	 it("gameBoard.iterate()",function(){
+		var board = new GameBoard();
+		
+		var obje = new function(){
+			this.iterate= function(){};
+		};
+		
+		var obj1 = new function(){
+			this.iterate= function(){};
+		};
+		spyOn(obje,"iterate");
+		spyOn(obj1,"iterate");
+		
+		board.add(obje);
+		board.add(obj1);
+		board.iterate('iterate');
+		_.each(board.objects, function(element,index,list){expect(element.iterate).toHaveBeenCalled()});
+		
+		
+		});
 	
-	/*
+	
 	it ("GameBoard.Overlap()",function(){
 	
 		var board = new GameBoard();
 		
-		var objet1={
-			x=2;
-			y=3;
-			h=4;
-			w=5;
+		var objet=function(){
+			this.x=2;
+			this.y=3;
+			this.h=4;
+			this.w=5;
 		};
 		
-		var objet2={
-			x=2;
-			y=3;
-			h=4;
-			w=5;
+		var objet2=function(){
+			this.x=2;
+			this.y=3;
+			this.h=4;
+			this.w=5;
 		};
+		
+		var objeto1=new objet;
+		var objeto2 = new objet2;
 		
 		spyOn(board, "overlap");
-		board.add(objet1);
-		board.add(objet2);
+		board.add(objeto1);
+		board.add(objeto2);
 		
-		expect(board.overlap(objet1,objet2)).toHaveBeenCalled();
-		expect(board.overlap(objet1,objet2)).toEqual(true);	
+		expect(board.overlap(objeto1,objeto2)).toHaveBeenCalled();
+		expect(board.overlap(objeto1,objeto2)).toEqual(true);	
 	
 	});
-	*/
+	
 
 });
 
