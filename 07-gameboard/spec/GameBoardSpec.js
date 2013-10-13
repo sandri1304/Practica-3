@@ -109,26 +109,83 @@ describe("GameBoard", function(){
 			this.w=5;
 		};
 		
-		var objet2=function(){
+		var objet1=function(){
+			this.x=8;
+			this.y=8;
+			this.h=1;
+			this.w=1;
+		};
+		
+		var objeto1=new objet;
+		var objeto2 = new objet;
+		var objeto3 = new objet1;
+		
+		//spyOn(board, "overlap");
+		board.add(objeto1);
+		board.add(objeto2);
+		board.add(objeto3);
+		
+	
+		expect(board.overlap(objeto1,objeto2)).toEqual(true);
+		expect(board.overlap(objeto1,objeto3)).toEqual(false);	
+	
+	});
+	/*
+	it ("GameBoard.Collide()",function(){
+		
+		var board = new GameBoard();
+	
+		var objet=function(){
 			this.x=2;
 			this.y=3;
 			this.h=4;
 			this.w=5;
 		};
 		
-		var objeto1=new objet;
-		var objeto2 = new objet2;
+		var objet1=function(){
+			this.x=8;
+			this.y=8;
+			this.h=1;
+			this.w=1;
+		};
 		
-		//spyOn(board, "overlap");
+		var objeto1=new objet;
+		var objeto2 = new objet;
+		var objeto3 = new objet1;
+		
 		board.add(objeto1);
 		board.add(objeto2);
-		
-		//expect(board.overlap(objeto1,objeto2)).toHaveBeenCalled();
-		expect(board.overlap(objeto1,objeto2)).toEqual(true);	
-	
+		board.add(objeto3);
 	});
-	
-
+*/
+	it(GameBoard.dectect(),function(){
+		var board = new GameBoard();
+		
+		var objet=function(){
+			this.x=8;
+			this.y=8;
+			this.h=1;
+			this.w=1;
+		};
+		
+		var objet1=function(){
+			this.x=2;
+			this.y=2;
+			this.h=1;
+			this.w=1;
+		};
+		
+		var objeto1 = new objet;
+		var objeto2 = new objet1;
+		
+		board.add(objeto1);
+		board.add(objeto2);
+		board.detect(objeto1);
+		
+		expect(board.objects[1]).toEqual(objeto1);
+		
+		)};
+		
 });
 
 /*
