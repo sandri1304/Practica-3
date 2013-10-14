@@ -209,12 +209,12 @@ var GameBoard = function() {
 	// Convertimos en un array args (1..)
 	var args = Array.prototype.slice.call(arguments,1);
 
-	_each(this.objects).foreach(function(objeto){objeto[funcname].apply(objeto,args)});
+		_(this.objects).each( function(obj) { obj[funcName].apply(obj,args) });
     };
 
     // Devuelve el primer objeto de objects para el que func es true
     this.detect = function(func) {
-	return _.find(this.objects, function(objeto) { return func.call(objeto) }) || false;
+		return _(this.objects).find( function(obj) { return func.call(obj) }) || false;
     };
 
     // Cuando Game.loop() llame a step(), hay que llamar al método
@@ -256,5 +256,6 @@ var GameBoard = function() {
 
 
 };
+
 
 
