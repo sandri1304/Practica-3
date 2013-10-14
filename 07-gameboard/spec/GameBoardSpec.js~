@@ -48,10 +48,10 @@ describe("GameBoard", function(){
 		//board.step(new PlayerShip());
 		
 		var dum = {step: function () {}}
-        spyOn(dum, "step");
-        objeto=board.add(dum);
-        board.step(ctx);
-        expect(dum.step).toHaveBeenCalled();
+		spyOn(dum, "step");
+		objeto=board.add(dum);
+		board.step(ctx);
+		expect(dum.step).toHaveBeenCalled();
 		
 		//waits(100);
 		
@@ -66,9 +66,9 @@ describe("GameBoard", function(){
 		
 		var dum ={draw: function(){}}
 		spyOn(dum, "draw");
-        objeto:board.add(dum);
-        board.draw(ctx);
-        expect(dum.draw).toHaveBeenCalled();
+		objeto:board.add(dum);
+		board.draw(ctx);
+		expect(dum.draw).toHaveBeenCalled();
 	 });
 	 
 	 it("gameBoard.iterate()",function(){
@@ -131,10 +131,11 @@ describe("GameBoard", function(){
 		var obj2 = new objet; 
 		
 		objeto1=board.add(obj1);
-        objeto2=board.add(obj2);
-        
-        expect(board.collide(objeto1)).toBe(objeto2);
+		objeto2=board.add(obj2);
+
+		expect(board.collide(objeto1)).toBe(objeto2);
 	});
+	
 	/*
 	it ("GameBoard.detect()",function(){
 		var board = new GameBoard();

@@ -215,7 +215,6 @@ var GameBoard = function() {
     // Devuelve el primer objeto de objects para el que func es true
     this.detect = function(func) {
 		return _.find(this.objects, function(obj) { return func.call(obj) }) || false;
-	
     };
 
     // Cuando Game.loop() llame a step(), hay que llamar al método
@@ -257,5 +256,3 @@ var GameBoard = function() {
 
 
 };
-
-

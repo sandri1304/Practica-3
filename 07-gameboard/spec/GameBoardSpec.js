@@ -26,19 +26,12 @@ describe("GameBoard", function(){
 
 	it ("GameBoard.Remove()", function(){
 		var board = new GameBoard();
-		
-		//spyOn(board, "remove");
-		//spyOn(board,"resetRemoved");
-		//spyOn(board, "finalizeRemoved");
-		
+	
 		objeto = board.add(new PlayerShip());
 		board.resetRemoved();
 		board.remove(objeto);
 		board.finalizeRemoved();
 		expect(board.objects[0]).toEqual(undefined);
-		//expect(board.remove).toHaveBeenCalled();
-		//expect(board.resetRemoved).toHaveBeenCalled();
-		//expect(board.finalizeRemoved).toHaveBeenCalled();
 	});
 
 	it ("GameBoard.step()",function(){
@@ -135,30 +128,6 @@ describe("GameBoard", function(){
 
 		expect(board.collide(objeto1)).toBe(objeto2);
 	});
-	
-	/*
-	it ("GameBoard.detect()",function(){
-		var board = new GameBoard();
-		/*
-		var objet = function(){
-			this.x=3;
-		};
-		
-		var obj1 = new objet;
-		
-		objeto1=board.add(obj1);
-		
-		expect(board.detect(function(objeto){return this.x === 3})).toBe(objeto1);
-		
-        dummy1= {x:1};
-        dummy2= {x:2};
-        obj1=board.add(dummy1);
-        obj2=board.add(dummy2);
-        expect(board.detect(function(objeto){return this.x === 1})).toBe(dummy1);
-	)};
-	*/
-		
-		
 	
 });
 	
