@@ -107,17 +107,7 @@ describe("Clase PlayerShip", function(){
 
 
     });
-    
-    it("step con tecla fuego pulsada", function(){
-    	Game = {width: 320, height: 480, keys: {'fire': true}};
-		var miNave = new PlayerShip();
-				
-		spyOn(miNave,'step');
-		
-		miNave.step(1);
-		
-		expect(miNave.step).toHaveBeenCalled();
-	});
+
 
 
 });

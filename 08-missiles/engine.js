@@ -209,7 +209,7 @@ var GameBoard = function() {
 	// Convertimos en un array args (1..)
 	var args = Array.prototype.slice.call(arguments,1);
 
-	_.each(this.objects, function(objeto){objeto[funcname].apply(objeto,args)});
+	_each(this.objects).foreach(function(objeto){objeto[funcname].apply(objeto,args)});
     };
 
     // Devuelve el primer objeto de objects para el que func es true
