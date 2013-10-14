@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 describe("GameBoard", function(){
     var canvas, ctx;
 
@@ -167,6 +168,8 @@ describe("GameBoard", function(){
 
 
 
+=======
+>>>>>>> ramaprototipo7
 /*
 
 

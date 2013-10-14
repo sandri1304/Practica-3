@@ -135,7 +135,11 @@ describe("GameBoard", function(){
 
 		expect(board.collide(objeto1)).toBe(objeto2);
 	});
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> ramaprototipo7
 	/*
 	it ("GameBoard.detect()",function(){
 		var board = new GameBoard();

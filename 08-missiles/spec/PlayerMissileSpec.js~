@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 describe("PlayerMissile", function() {
 
 	var canvas, ctx;
@@ -72,6 +73,8 @@ SpriteSheet = {
 	*/
 });
 
+=======
+>>>>>>> ramaprototipo7
 /*
 
   Requisitos: 
@@ -100,4 +103,8 @@ SpriteSheet = {
     a haber muchos disparos, para lo cual se declararán los métodos de
     la clase en el prototipo
 
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> ramaprototipo7
