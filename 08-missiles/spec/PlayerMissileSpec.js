@@ -3,23 +3,7 @@ describe("PlayerMissile", function() {
 	var canvas, ctx;
 
     beforeEach(function(){
-<<<<<<< HEAD
-	loadFixtures('index.html');
 
-	canvas = $('#game')[0];
-	expect(canvas).toExist();
-
-	ctx = canvas.getContext('2d');
-	expect(ctx).toBeDefined();
-
-    });
-	
-	it("PlayerMissile.draw()", function() {
-	
-		SpriteSheet = {
-   				map :{missile: { sx: 0, sy:30, w: 2, h: 10, frames: 1 }},
-  				draw: function() {}
-=======
 		loadFixtures('index.html');
 
 		canvas = $('#game')[0];
@@ -29,13 +13,14 @@ describe("PlayerMissile", function() {
 		expect(ctx).toBeDefined();
 
     });
+	
 
 	it("PlayerMissile.draw()", function() {
 
 		SpriteSheet = {
     		map :{missile: { sx: 0, sy:30, w: 2, h: 10, frames: 1 }},
   			draw: function() {}
->>>>>>> ramaprototipo7
+
 		};
 
        missil = new PlayerMissile(1,5);
@@ -47,20 +32,7 @@ describe("PlayerMissile", function() {
        expect(SpriteSheet.draw).toHaveBeenCalled();
 
 	});
-<<<<<<< HEAD
-	
 
-	it ("PlayerMissile.Step()", function(){
-	
-		SpriteSheet = {
-   				map :{missile: { sx: 0, sy:30, w: 2, h: 10, frames: 1 }},
-  				step: function() {}
-		};
-		missil = new PlayerMissile(1,5);
-		
-		missil.board={remove: function (){} };
-		
-=======
 
 
 	it ("PlayerMissile.Step()", function(){
@@ -73,29 +45,19 @@ describe("PlayerMissile", function() {
 
 		missil.board={remove: function (){} };
 
->>>>>>> ramaprototipo7
       
        spyOn(missil.board, "remove");
       
        missil.step(0.2);
       
        expect(missil.board.remove).toHaveBeenCalled();
-<<<<<<< HEAD
+
    	});
 
-});
 
-=======
-    });
 
 });
 
-
-
-
-
-
->>>>>>> ramaprototipo7
 /*
 
   Requisitos: 

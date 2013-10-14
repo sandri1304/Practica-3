@@ -1,45 +1,38 @@
-<<<<<<< HEAD
 describe("GameBoard", function(){
     var canvas, ctx;
 
     beforeEach(function(){
-	loadFixtures('index.html');
 
-	canvas = $('#game')[0];
-	expect(canvas).toExist();
+		loadFixtures('index.html');
 
-	ctx = canvas.getContext('2d');
-	expect(ctx).toBeDefined();
+		canvas = $('#game')[0];
+		expect(canvas).toExist();
+
+		ctx = canvas.getContext('2d');
+		expect(ctx).toBeDefined();
+
 
     });
 
 	it("GameBoard.add()", function(){
-	
+
 		var board = new GameBoard();
 		spyOn(board, "add");
 		board.add(new PlayerShip());
 		var gb=5;
 		obj=board.add(gb);
-		
 		expect(board.objects[0]).toEqual(obj);
 		expect(board.add).toHaveBeenCalled();
 	});
 
 	it ("GameBoard.Remove()", function(){
 		var board = new GameBoard();
-		
-		//spyOn(board, "remove");
-		//spyOn(board,"resetRemoved");
-		//spyOn(board, "finalizeRemoved");
-		
+
 		objeto = board.add(new PlayerShip());
 		board.resetRemoved();
 		board.remove(objeto);
 		board.finalizeRemoved();
 		expect(board.objects[0]).toEqual(undefined);
-		//expect(board.remove).toHaveBeenCalled();
-		//expect(board.resetRemoved).toHaveBeenCalled();
-		//expect(board.finalizeRemoved).toHaveBeenCalled();
 	});
 
 	it ("GameBoard.step()",function(){
@@ -47,52 +40,58 @@ describe("GameBoard", function(){
 		var board = new GameBoard();
 		//spyOn(board, "step");
 		//board.step(new PlayerShip());
-		
+
 		var dum = {step: function () {}}
 		spyOn(dum, "step");
 		objeto=board.add(dum);
 		board.step(ctx);
 		expect(dum.step).toHaveBeenCalled();
+
 		
 		//waits(100);
 		
 		//runs(function(){
 			//expect(board.step).toHaveBeenCalled();
 		//});
+
+
 	});
 
 	it ("GameBoard.draw()",function(){
 
 		var board = new GameBoard();
-		
+
 		var dum ={draw: function(){}}
 		spyOn(dum, "draw");
 		objeto:board.add(dum);
 		board.draw(ctx);
 		expect(dum.draw).toHaveBeenCalled();
-	 });
+
 	
-	 it("gameBoard.iterate()",function(){
+
+	it("gameBoard.iterate()",function(){
 		var board = new GameBoard();
-		
+
 		var obje = new function(){
 			this.iterate= function(){};
 		};
-		
+
 		var obj1 = new function(){
 			this.iterate= function(){};
 		};
 		spyOn(obje,"iterate");
 		spyOn(obj1,"iterate");
-		
+
 		board.add(obje);
 		board.add(obj1);
 		board.iterate('iterate');
 		_.each(board.objects, function(element,index,list){expect(element.iterate).toHaveBeenCalled()});
-		});
+
+	});
 	
+
 	it ("GameBoard.Overlap()",function(){
-	
+
 		var board = new GameBoard();
 		var objet=function(){
 			this.x=2;
@@ -106,6 +105,7 @@ describe("GameBoard", function(){
 			this.h=1;
 			this.w=1;
 		};
+
 		
 		var objeto1=new objet;
 		var objeto2 = new objet;
@@ -118,7 +118,8 @@ describe("GameBoard", function(){
 		expect(board.overlap(objeto1,objeto2)).toEqual(true);
 		expect(board.overlap(objeto1,objeto3)).toEqual(false);	
 	});
-	
+
+
 	it ("GameBoard.collide()",function(){
 		var board = new GameBoard();
 		var objet=function(){
@@ -127,49 +128,22 @@ describe("GameBoard", function(){
 			this.h=2;
 			this.w=2;
 		};
+
 		
 		var obj1 = new objet;
 		var obj2 = new objet; 
-		
+
+		var obj1 = new objet;
+		var obj2 = new objet;
+
 		objeto1=board.add(obj1);
 		objeto2=board.add(obj2);
 
 		expect(board.collide(objeto1)).toBe(objeto2);
 	});
 
-	/*
-	it ("GameBoard.detect()",function(){
-		var board = new GameBoard();
-		
-		var objet ={
-			x:3;
-		};
-		
-		objeto1=board.add(objet);
-		
-
-		expect(board.detect(function(){return this.x === 3})).toBe(objeto1);
-	)};
-
-
-		expect(board.detect(function(objeto){return this.x === 3})).toBe(objeto1);
-		
-        dummy1= {x:1};
-        dummy2= {x:2};
-        obj1=board.add(dummy1);
-        obj2=board.add(dummy2);
-        expect(board.detect(function(objeto){return this.x === 1})).toBe(dummy1);
-	)};
-	*/
-
-	
 });
 
-
-
-
-=======
->>>>>>> ramaprototipo7
 /*
 
 

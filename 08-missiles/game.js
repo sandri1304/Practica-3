@@ -130,10 +130,6 @@ var PlayerShip = function() {
 			this.board.add(new PlayerMissile(this.x+this.w,this.y+this.h/2));
 			up=false;
 		}
-<<<<<<< HEAD
-		
-=======
->>>>>>> ramaprototipo7
     }
 
     this.draw = function(ctx) {

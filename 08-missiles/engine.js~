@@ -212,19 +212,17 @@ var GameBoard = function() {
 <<<<<<< HEAD
 	_.each(this.objects, function(obj) { obj[funcName].apply(obj,args) });
 =======
-	for(var i=0, len=this.objects.length; i<len;i++) {
-	    var obj = this.objects[i];
-	    obj[funcName].apply(obj,args)
-	}
+		_.each(this.objects, function(obj) { obj[funcName].apply(obj,args) });
 >>>>>>> ramaprototipo7
     };
 
     // Devuelve el primer objeto de objects para el que func es true
     this.detect = function(func) {
-	for(var i = 0,val=null, len=this.objects.length; i < len; i++) {
-	    if(func.call(this.objects[i])) return this.objects[i];
-	}
-	return false;
+<<<<<<< HEAD
+	return _.find(this.objects, function(obj) { return func.call(obj) }) || false;
+=======
+		return _.find(this.objects, function(obj) { return func.call(obj) }) || false;
+>>>>>>> ramaprototipo7
     };
 
     // Cuando Game.loop() llame a step(), hay que llamar al método

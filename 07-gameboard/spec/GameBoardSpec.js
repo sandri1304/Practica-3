@@ -128,35 +128,7 @@ describe("GameBoard", function(){
 
 		expect(board.collide(objeto1)).toBe(objeto2);
 	});
-<<<<<<< HEAD
 
-	/*
-	it ("GameBoard.detect()",function(){
-		var board = new GameBoard();
-		
-		var objet ={
-			x:3;
-		};
-		
-		objeto1=board.add(objet);
-		
-
-		expect(board.detect(function(){return this.x === 3})).toBe(objeto1);
-	)};
-
-
-		expect(board.detect(function(objeto){return this.x === 3})).toBe(objeto1);
-		
-        dummy1= {x:1};
-        dummy2= {x:2};
-        obj1=board.add(dummy1);
-        obj2=board.add(dummy2);
-        expect(board.detect(function(objeto){return this.x === 1})).toBe(dummy1);
-	)};
-	*/
-
-=======
->>>>>>> ramaprototipo7
 	
 });
 	

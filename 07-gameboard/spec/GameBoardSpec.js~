@@ -26,19 +26,12 @@ describe("GameBoard", function(){
 
 	it ("GameBoard.Remove()", function(){
 		var board = new GameBoard();
-		
-		//spyOn(board, "remove");
-		//spyOn(board,"resetRemoved");
-		//spyOn(board, "finalizeRemoved");
-		
+	
 		objeto = board.add(new PlayerShip());
 		board.resetRemoved();
 		board.remove(objeto);
 		board.finalizeRemoved();
 		expect(board.objects[0]).toEqual(undefined);
-		//expect(board.remove).toHaveBeenCalled();
-		//expect(board.resetRemoved).toHaveBeenCalled();
-		//expect(board.finalizeRemoved).toHaveBeenCalled();
 	});
 
 	it ("GameBoard.step()",function(){
@@ -137,9 +130,6 @@ describe("GameBoard", function(){
 	});
 <<<<<<< HEAD
 
-=======
-	
->>>>>>> ramaprototipo7
 	/*
 	it ("GameBoard.detect()",function(){
 		var board = new GameBoard();
@@ -164,8 +154,8 @@ describe("GameBoard", function(){
         expect(board.detect(function(objeto){return this.x === 1})).toBe(dummy1);
 	)};
 	*/
-		
-		
+
+=======
 >>>>>>> ramaprototipo7
 	
 });
