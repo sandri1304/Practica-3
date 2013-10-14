@@ -23,7 +23,7 @@ describe("GameBoard", function(){
 		expect(board.objects[0]).toEqual(obj);
 		expect(board.add).toHaveBeenCalled();
 	});
-	/*
+
 	it ("GameBoard.Remove()", function(){
 		var board = new GameBoard();
 		
@@ -40,11 +40,7 @@ describe("GameBoard", function(){
 		//expect(board.resetRemoved).toHaveBeenCalled();
 		//expect(board.finalizeRemoved).toHaveBeenCalled();
 	});
-	 
 	
-	
-	
-
 	it ("GameBoard.step()",function(){
 
 		var board = new GameBoard();
@@ -63,9 +59,7 @@ describe("GameBoard", function(){
 			//expect(board.step).toHaveBeenCalled();
 		//});
 	});
-	
-
-	
+		
 	it ("GameBoard.draw()",function(){
 
 		var board = new GameBoard();
@@ -76,7 +70,7 @@ describe("GameBoard", function(){
         board.draw(ctx);
         expect(dum.draw).toHaveBeenCalled();
 	 });
-	 
+	
 	 it("gameBoard.iterate()",function(){
 		var board = new GameBoard();
 		
@@ -141,29 +135,19 @@ describe("GameBoard", function(){
         
         expect(board.collide(objeto1)).toBe(objeto2);
 	});
-	
+	/*
 	it ("GameBoard.detect()",function(){
 		var board = new GameBoard();
-		/*
-		var objet = function(){
-			this.x=3;
+		
+		var objet ={
+			x:3;
 		};
 		
-		var obj1 = new objet;
+		objeto1=board.add(objet);
 		
-		objeto1=board.add(obj1);
-		
-		expect(board.detect(function(objeto){return this.x === 3})).toBe(objeto1);
-		*/
-        dummy1= {x:1};
-        dummy2= {x:2};
-        obj1=board.add(dummy1);
-        obj2=board.add(dummy2);
-        expect(board.detect(function(objeto){return this.x === 1})).toBe(dummy1);
+		expect(board.detect(function(){return this.x === 3})).toBe(objeto1);
 	)};
-		*/
-		
-		
+	*/
 	
 });
 	
