@@ -23,7 +23,7 @@ describe("GameBoard", function(){
 		expect(board.objects[0]).toEqual(obj);
 		expect(board.add).toHaveBeenCalled();
 	});
-	/*
+
 	it ("GameBoard.Remove()", function(){
 		var board = new GameBoard();
 		
@@ -40,10 +40,6 @@ describe("GameBoard", function(){
 		//expect(board.resetRemoved).toHaveBeenCalled();
 		//expect(board.finalizeRemoved).toHaveBeenCalled();
 	});
-	 
-	
-	
-	
 
 	it ("GameBoard.step()",function(){
 
@@ -51,11 +47,11 @@ describe("GameBoard", function(){
 		//spyOn(board, "step");
 		//board.step(new PlayerShip());
 		
-		var dummy = {step: function () {}}
-        spyOn(dummy, "step");
-        objeto=board.add(dummy);
-        board.step(ctx);
-        expect(dummy.step).toHaveBeenCalled();
+		var dum = {step: function () {}}
+		spyOn(dum, "step");
+		objeto=board.add(dum);
+		board.step(ctx);
+		expect(dum.step).toHaveBeenCalled();
 		
 		//waits(100);
 		
@@ -63,18 +59,16 @@ describe("GameBoard", function(){
 			//expect(board.step).toHaveBeenCalled();
 		//});
 	});
-	
 
-	
 	it ("GameBoard.draw()",function(){
 
 		var board = new GameBoard();
 		
 		var dum ={draw: function(){}}
 		spyOn(dum, "draw");
-        objeto:board.add(dum);
-        board.draw(ctx);
-        expect(dum.draw).toHaveBeenCalled();
+		objeto:board.add(dum);
+		board.draw(ctx);
+		expect(dum.draw).toHaveBeenCalled();
 	 });
 	 
 	 it("gameBoard.iterate()",function(){
@@ -137,11 +131,12 @@ describe("GameBoard", function(){
 		var obj2 = new objet; 
 		
 		objeto1=board.add(obj1);
-        objeto2=board.add(obj2);
-        
-        expect(board.collide(objeto1)).toBe(objeto2);
+		objeto2=board.add(obj2);
+
+		expect(board.collide(objeto1)).toBe(objeto2);
 	});
 	
+	/*
 	it ("GameBoard.detect()",function(){
 		var board = new GameBoard();
 		/*
@@ -154,14 +149,14 @@ describe("GameBoard", function(){
 		objeto1=board.add(obj1);
 		
 		expect(board.detect(function(objeto){return this.x === 3})).toBe(objeto1);
-		*/
+		
         dummy1= {x:1};
         dummy2= {x:2};
         obj1=board.add(dummy1);
         obj2=board.add(dummy2);
         expect(board.detect(function(objeto){return this.x === 1})).toBe(dummy1);
 	)};
-		*/
+	*/
 		
 		
 	
