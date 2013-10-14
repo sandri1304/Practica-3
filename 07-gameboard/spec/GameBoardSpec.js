@@ -40,11 +40,7 @@ describe("GameBoard", function(){
 		//expect(board.resetRemoved).toHaveBeenCalled();
 		//expect(board.finalizeRemoved).toHaveBeenCalled();
 	});
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> ramaprototipo7
 	it ("GameBoard.step()",function(){
 
 		var board = new GameBoard();
@@ -63,11 +59,7 @@ describe("GameBoard", function(){
 			//expect(board.step).toHaveBeenCalled();
 		//});
 	});
-<<<<<<< HEAD
-		
-=======
 
->>>>>>> ramaprototipo7
 	it ("GameBoard.draw()",function(){
 
 		var board = new GameBoard();
@@ -143,10 +135,7 @@ describe("GameBoard", function(){
 
 		expect(board.collide(objeto1)).toBe(objeto2);
 	});
-<<<<<<< HEAD
-=======
-	
->>>>>>> ramaprototipo7
+
 	/*
 	it ("GameBoard.detect()",function(){
 		var board = new GameBoard();
@@ -157,11 +146,11 @@ describe("GameBoard", function(){
 		
 		objeto1=board.add(objet);
 		
-<<<<<<< HEAD
+
 		expect(board.detect(function(){return this.x === 3})).toBe(objeto1);
 	)};
-	*/
-=======
+
+
 		expect(board.detect(function(objeto){return this.x === 3})).toBe(objeto1);
 		
         dummy1= {x:1};
@@ -171,9 +160,7 @@ describe("GameBoard", function(){
         expect(board.detect(function(objeto){return this.x === 1})).toBe(dummy1);
 	)};
 	*/
-		
-		
->>>>>>> ramaprototipo7
+
 	
 });
 	
